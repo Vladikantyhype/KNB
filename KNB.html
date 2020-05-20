@@ -4,25 +4,31 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="cssForKNB.css">
     <title>Rock Papper Sicssors</title>
-    <audio src="./files/RPS.ogg" controls autoplay="autoplay"></audio>
-
 </head>
 <body>
+<audio src="./files/RPS.ogg" controls autoplay="autoplay" preload="auto"></audio>
     <header class="header">
         <h1>ROCK PAPPER SICSSORS</h1>
     </header>
     <div class="container">
         <div class="score-container">
           <span class="User">Player</span>
-          <span id="score">0-0</span>
+          <span id="score"></span>
           <span class="Com">COM</span>
     </div>
         <div class="buttons">
-    <button class="bt" onclick="" value = ""><img src="files/ROCK.png"></button>
-    <button class="bt" onclick="" value = ""><img src="files/paper.png"></button>
-    <button class="bt" onclick="" value = ""><img src="files/scissors.png"></button>
+            <form>
+    <button class="bt" onclick="game(rock, computerPlay())" type="button"><img src="./files/ROCK.png" alt="ROCK" height="60px" width="60px" ></button>
+    <button class="bt" onclick="game(paper, computerPlay())" type="button"><img src="files/paper.png" alt="PAPPER" height="40px" width="40px" ></button>
+    <button class="bt" onclick="game(scissors, computerPlay())" type="button"><img src="files/scissors.png" alt="SCISSORS" height="60px" width="60px" ></button>
+            </form>
         </div>
     </div>
-    <script src="JSfile.js"></script>
+<div id = "resOfGame">
+<div id="txtResult"></div>
+<div id = "endOfGame"></div>
+</div>
+
+        <script type="text/javascript" src="./JSfile.js"></script>
 </body>
 </html>
